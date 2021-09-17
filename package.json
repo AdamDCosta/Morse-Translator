@@ -2,16 +2,18 @@
   "name": "morse-translator",
   "version": "1.0.0",
   "description": "This is my morse code translator.",
-  "main": "\u001b[A\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D More code translator\u001b[B\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C",
+  "main": "",
   "dependencies": {
     "jest": "^27.2.0"
   },
-  "devDependencies": {},
-  
-    "scripts": {
-      "test": "jest"
-    },
-
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-jest": "^27.2.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AdamDCosta/Morse-Translator.git"
