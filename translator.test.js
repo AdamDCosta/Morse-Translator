@@ -1,7 +1,6 @@
-// it should 
+import { translateToMorse, translateToEnglish } from "./translator.js"
 
-const { it, expect } = require("@jest/globals");
-const { describe } = require("yargs");
+
 
 // it should 
 
@@ -29,7 +28,7 @@ const { describe } = require("yargs");
 describe("Testing translateToMorse()", () => {
   it("Should return . when I pass e", () => {
     let result;
-    result = translateToMorse(e);
+    result = translateToMorse("e");
     expect(result).toBe(".");
   })
 
@@ -38,7 +37,7 @@ describe("Testing translateToMorse()", () => {
 
   it("Should return . when I pass E", () => {
     let result;
-    result = translateToMorse(E);
+    result = translateToMorse("E");
     expect(result).toBe(".");
   })
 
@@ -51,31 +50,86 @@ describe("Testing translateToMorse()", () => {
     expect(result).toBe(".----");
   })
 
+  // It should return a space between each letter(.- -. -..) when I pass 'and' to translateToMorse()
+
+  it("Should return .- -. -.. when I pass 'and'", () => {
+    let result;
+    result = translateToMorse("and");
+    expect(result).toBe(".- -. -..");
+  })
+  
+  // It should return a forward slash between the words (.... . .-.. .-.. --- / - .... . .-. .)when I pass "hello there" to translateToMorse()
+
+  it("Should return .... . .-.. .-.. --- / - .... . .-. . when I pass 'hello there'", () => {
+    let result;
+    result = translateToMorse("hello there");
+    expect(result).toBe(".... . .-.. .-.. --- / - .... . .-. .");
+  })
+
+  //It should return '..--..' when I pass '?' to translateToMorse
+  // (this should apply to all other valid punctuation)
+
+  it("Should return ..--.. when I pass ?", () => {
+    let result;
+    result = translateToMorse("?");
+    expect(result).toBe("..--..");
+  })
+
+  //It should return '... --- ...' when I pass 'SOS' through translateToEnglish()
+
+  it("Should return ... --- ... when I pass SOS", () => {
+    let result;
+    result = translateToMorse("SOS");
+    expect(result).toBe("... --- ...");
+  })
+
+
+  ///It should return “Character not available in morse code” if character “%” is input.
+
+  it("Should return Character not available in morse code when I pass %", () => {
+    let result;
+    result = translateToMorse("%");
+    expect(result).toBe("Character not available in morse code");
+  })
+
+
+  //It should return “Character not available in morse code” if I pass an "" to translateToMorse()
+
+  it("Should return Character not available in morse code when I pass empty string", () => {
+    let result;
+    result = translateToMorse("");
+    expect(result).toBe("Character not available in morse code");
+  })
+  
+   //It should return “Character not available in morse code” if I pass an [] to translateToMorse()
+
+   it("Should return Character not available in morse code when I pass an empty array", () => {
+    let result;
+    result = translateToMorse([]);
+    expect(result).toBe("Character not available in morse code");
+  })
+
+})
+
+
+describe("Testing translateToEnglish()", () => {
+  it("Should return e when I pass .", () => {
+    let result;
+    result = translateToMorse(".");
+    expect(result).toBe("e");
+  })
+
+  it("Should return SOS when I pass ... --- ...", () => {
+    let result;
+    result = translateToMorse("... --- ...");
+    expect(result).toBe("SOS");
+  })
+
 })
 
 
 
 
 
-
-
-
-
-
-// It should return a space between each letter(.- -. -..) when I pass 'and' to translateToMorse()
-
-// It should return a forward slash between the words (.... . .-.. .-.. --- / - .... . .-. .)when I pass "hello there" to translateToMorse()
-
-//It should return '..--..' when I pass '?' to translateToMorse
-// (this should apply to all other valid punctuation)
-
-//It should return 'SOS' when I pass '... --- ...' through translateToEnglish()
-
-///It should return “Character not available in morse code” if character “%” is input.
-
-// (This would return whenever a symbol that is not registered with the internation morse code dictionary is input)
-
-//It should return “Character not available in morse code” if I pass an "" to translateToMorse()
-//(this would apply to all datatypes)
 
 
