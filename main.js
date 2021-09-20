@@ -13,7 +13,7 @@ const textOutput = document.querySelector(".translation");
 let invalid = "Character not available in morse code"
 
 
-const translateToMorse = () => {
+ export const translateToMorse = () => {
   let userInput = textInput.value.toLowerCase();
   let inputLetters = userInput.split("");
   let morseOutput = inputLetters.map(letter => {
@@ -32,6 +32,5 @@ const translateToMorse = () => {
 
 translateBtn.addEventListener("click", (event) => {
   event.preventDefault();
-  // let userInput = textInput.textContent;
-  translateToMorse(userInput);
+  translateToMorse(textInput);
 })

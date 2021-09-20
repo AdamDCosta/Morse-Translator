@@ -38,15 +38,20 @@ main .translator__input {
   background-color: #345B63;
   color: #D4ECDD;
   height: 40vh;
-  width: 80%;
+  width: 100%;
   border: none;
   font-size: 1.5rem;
+}
+@media (min-width: 1200px) {
+  main .translator__input {
+    font-size: 3rem;
+  }
 }
 main .translator__submit {
   background-color: #D4ECDD;
   color: #152D35;
   font-size: 2rem;
-  width: 80%;
+  width: 100%;
   padding: 10px 20px;
   border-radius: 5px;
   letter-spacing: 2px;

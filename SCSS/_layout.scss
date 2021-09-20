@@ -1,4 +1,5 @@
 @use "./abstracts" as *;
+@use "./mixins" as *;
 
 main {
   display: flex;
@@ -33,9 +34,13 @@ main {
       background-color: $color-green-dark;
       color: $color-green-light;
       height: 40vh;
-      width: 80%;
+      width: 100%;
       border: none;
       font-size: 1.5rem;
+
+      @include desktop {
+        font-size: 3rem;
+      }
 
     }
 
@@ -43,7 +48,7 @@ main {
       background-color: $color-green-light;
       color: $color-grey;
       font-size: 2rem;
-      width: 80%;
+      width: 100%;
       padding: 10px 20px;
       border-radius: 5px;
       letter-spacing: 2px;
