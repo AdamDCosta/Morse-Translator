@@ -27,7 +27,7 @@ main .translator {
   align-items: center;
   margin: 20px;
   width: 90%;
-  height: 60vh;
+  height: 40vh;
 }
 main .translator__label {
   color: #D4ECDD;
@@ -41,6 +41,7 @@ main .translator__input {
   width: 100%;
   border: none;
   font-size: 1.5rem;
+  text-align: center;
 }
 @media (min-width: 1200px) {
   main .translator__input {
@@ -61,10 +62,21 @@ main .translator__submit:hover {
   color: #D4ECDD;
 }
 main .translation {
-  height: 30vh;
+  height: 25vh;
   border: 1px solid #D4ECDD;
-  width: 100%;
+  width: 90%;
 }
 main .translation p {
   color: #D4ECDD;
+}
+main .clear {
+  background-color: #D4ECDD;
+  opacity: 0.75;
+  color: #152D35;
+  font-size: 1.5rem;
+  width: 90%;
+  margin-top: 10px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  letter-spacing: 2px;
 }

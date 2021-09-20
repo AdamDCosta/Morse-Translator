@@ -1,49 +1,26 @@
 import { validCharacters } from "./data/data.js";
 
-import { translateToMorse } from "./main.js";
+// import { translateToMorse } from "./main.js";
 
 
-
-
-export const translateToMorse = (english) => {
-  return ".----";
-}
-
-export const translateToEnglish = (morse) => {
-  return "e";
-}
-
-// input a - returns corresponding morse
-
-// let userInput = textInput.value;
-
-let invalid = "Character not available in morse code"
-
-
-export const translateToMorse = () => {
-  let userInput = textInput.value.toLowerCase();
+export const translateToMorse = (string) => {
+  let userInput = string.value.toLowerCase();
   let inputLetters = userInput.split("");
   let morseOutput = inputLetters.map(letter => {
     if (validCharacters[letter]) {
       return validCharacters[letter];
     }
     else {
+      let invalid = "Character not available in morse code"
       return invalid;
     }
     
   })
   let result = morseOutput.join(" ");
-  textOutput.innerHTML = `<p>${result}</p>`;
+  // textOutput.innerHTML = `<p>${result}</p>`;
+  return `<p>${result}</p>`;
   
 }
-
-
-translateBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  let userInput = textInput.textContent;
-  translateToMorse(userInput);
-  
-})
 
 
 
