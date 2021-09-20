@@ -6,11 +6,11 @@ const translateBtn = document.querySelector("button");
 
 const textOutput = document.querySelector(".translation");
 
-// export const translateToMorse = (english) => {
+// export const testTranslateToMorse = (english) => {
 //   return ".----";
 // }
 
-export const translateToEnglish = (morse) => {
+export const testTranslateToEnglish = (morse) => {
   return "e";
 }
 
@@ -32,10 +32,10 @@ let invalid = "Character not available in morse code"
 
 export const translateToMorse = () => {
   let userInput = textInput.value.toLowerCase();
-  let inputArr = userInput.split("");
-  let morseOutput = inputArr.map(input => {
-    if (validCharacters[input]) {
-      return validCharacters[input];
+  let inputLetters = userInput.split("");
+  let morseOutput = inputLetters.map(letter => {
+    if (validCharacters[letter]) {
+      return validCharacters[letter];
     }
     else {
       return invalid;
@@ -57,10 +57,14 @@ export const translateToMorse = () => {
 // `the translation of ${input} is ${validCharacters.charAt(input(i))}`
 
 
-translateBtn.addEventListener("click", () => {
+translateBtn.addEventListener("click", (event) => {
+  event.preventDefault();
   let userInput = textInput.textContent;
   translateToMorse(userInput);
+  
 })
+
+
 
 // ->when translate button pressed, the function takes the user input - finds the corresponding values to the keys and returns the output in <p></p> as a string without commas
 
