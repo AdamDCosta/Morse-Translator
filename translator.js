@@ -1,10 +1,8 @@
 import { validCharacters } from "./data/data.js";
 
-// import { translateToMorse } from "./main.js";
 
-
-export const translateToMorse = (string) => {
-  let userInput = string.value.toLowerCase();
+export const translateToMorse = (english) => {
+  let userInput = english.value.toLowerCase();
   let inputLetters = userInput.split("");
   let morseOutput = inputLetters.map(letter => {
     if (validCharacters[letter]) {
@@ -13,13 +11,10 @@ export const translateToMorse = (string) => {
     else {
       let invalid = "Character not available in morse code"
       return invalid;
-    }
-    
+    } 
   })
   let result = morseOutput.join(" ");
-  // textOutput.innerHTML = `<p>${result}</p>`;
   return `<p>${result}</p>`;
-  
 }
 
 

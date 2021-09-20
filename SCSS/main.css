@@ -80,3 +80,7 @@ main .clear {
   border-radius: 5px;
   letter-spacing: 2px;
 }
+main .clear:hover {
+  background-color: #152D35;
+  color: #D4ECDD;
+}

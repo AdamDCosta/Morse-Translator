@@ -1,8 +1,4 @@
-import { translateToMorse, translateToEnglish } from "./translator.js"
-
-
-
-
+import { translateToMorse } from "./translator.js";
 
 
 describe("Testing translateToMorse()", () => {
@@ -59,13 +55,6 @@ describe("Testing translateToMorse()", () => {
   })
 
 
-
-
-  it("Should return Character not available in morse code when I pass %", () => {
-    let result;
-    result = translateToMorse("%");
-    expect(result).toBe("Character not available in morse code");
-  })
 
 
   it("Should return Character not available in morse code when I pass empty string", () => {

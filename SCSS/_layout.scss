@@ -89,5 +89,10 @@ main {
     
   }
 
+  .clear:hover {
+    background-color: $color-grey;
+    color: $color-green-light;
+  }
+
 }
 
