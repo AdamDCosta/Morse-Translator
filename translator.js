@@ -1,6 +1,6 @@
 import { validCharacters } from "./data/data.js";
 
-const textInput = document.querySelector("textarea");
+const textInput = document.querySelector(".translator__input");
 
 const translateBtn = document.querySelector("button");
 
@@ -16,19 +16,36 @@ export const translateToEnglish = (morse) => {
 
 // input a - returns corresponding morse
 
-let userInput = "";
-let morseOutput = "";
+// let userInput = textInput.value;
 
+let invalid = "Character not available in morse code"
 
-export const translateToMorse = (input) => {
-  input.forEach(letter => {
-    if (validCharacters.hasOwnProperty(input.charAt(i))) {
-      morseOutput += validCharacters(input.charAt(i))
-      textOutput = `<p>${morseOutput}</p>`
-    }
-  })
+// export const translateToMorse = (input) => {
+//   input.forEach(letter => {
+//     if (validCharacters.hasOwnProperty(input.charAt(i))) {
+//       morseOutput += validCharacters(input.charAt(i))
+//       textOutput = `<p>${morseOutput}</p>`
+//     }
+//   })
   
+// }
+
+export const translateToMorse = () => {
+  let userInput = textInput.value.toLowerCase();
+  let inputArr = userInput.split("");
+  let morseOutput = inputArr.map(input => {
+    if (validCharacters[input]) {
+      return validCharacters[input];
+    }
+    else {
+      return invalid;
+    }
+    
+  })
+  let result = morseOutput.join(" ");
+  textOutput.innerHTML = `<p>${result}</p>`;
 }
+
 
 
 
