@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Lobster, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #112031;
+  color: #D4ECDD;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+}
+main .translator {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px;
+  width: 90%;
+  height: 60vh;
+}
+main .translator__label {
+  color: #D4ECDD;
+  opacity: 0.75;
+}
+main .translator__input {
+  margin: 20px;
+  background-color: #345B63;
+  color: #D4ECDD;
+  height: 40vh;
+  width: 80%;
+  border: none;
+  font-size: 1.5rem;
+}
+main .translator__submit {
+  background-color: #D4ECDD;
+  color: #152D35;
+  font-size: 2rem;
+  width: 80%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+main .translator__submit:hover {
+  background-color: #152D35;
+  color: #D4ECDD;
+}
+main .translation {
+  height: 30vh;
+  border: 1px solid #D4ECDD;
+  width: 100%;
+}
+main .translation p {
+  color: #D4ECDD;
+}

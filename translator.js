@@ -1,10 +1,6 @@
 import { validCharacters } from "./data/data.js";
 
-const textInput = document.querySelector(".translator__input");
 
-const translateBtn = document.querySelector("button");
-
-const textOutput = document.querySelector(".translation");
 
 // export const testTranslateToMorse = (english) => {
 //   return ".----";
@@ -18,51 +14,33 @@ export const testTranslateToEnglish = (morse) => {
 
 // let userInput = textInput.value;
 
-let invalid = "Character not available in morse code"
+// let invalid = "Character not available in morse code"
 
-// export const translateToMorse = (input) => {
-//   input.forEach(letter => {
-//     if (validCharacters.hasOwnProperty(input.charAt(i))) {
-//       morseOutput += validCharacters(input.charAt(i))
-//       textOutput = `<p>${morseOutput}</p>`
+
+// export const translateToMorse = () => {
+//   let userInput = textInput.value.toLowerCase();
+//   let inputLetters = userInput.split("");
+//   let morseOutput = inputLetters.map(letter => {
+//     if (validCharacters[letter]) {
+//       return validCharacters[letter];
 //     }
+//     else {
+//       return invalid;
+//     }
+    
 //   })
+//   let result = morseOutput.join(" ");
+//   textOutput.innerHTML = `<p>${result}</p>`;
   
 // }
 
-export const translateToMorse = () => {
-  let userInput = textInput.value.toLowerCase();
-  let inputLetters = userInput.split("");
-  let morseOutput = inputLetters.map(letter => {
-    if (validCharacters[letter]) {
-      return validCharacters[letter];
-    }
-    else {
-      return invalid;
-    }
-    
-  })
-  let result = morseOutput.join(" ");
-  textOutput.innerHTML = `<p>${result}</p>`;
-}
 
-
-
-
-
-
-// const index 
-// const input = "abc"
-
-// `the translation of ${input} is ${validCharacters.charAt(input(i))}`
-
-
-translateBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  let userInput = textInput.textContent;
-  translateToMorse(userInput);
+// translateBtn.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   let userInput = textInput.textContent;
+//   translateToMorse(userInput);
   
-})
+// })
 
 
 

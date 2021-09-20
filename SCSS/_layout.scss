@@ -1,1 +1,71 @@
 @use "./abstracts" as *;
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: $color-dark;
+  color: $color-green-light;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+
+  .translator {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px;
+    width: 90%;
+    height: 60vh;
+
+    &__label {
+      color: $color-green-light;
+      opacity: 0.75;
+    }
+
+    &__input {
+      margin: 20px;
+      background-color: $color-green-dark;
+      color: $color-green-light;
+      height: 40vh;
+      width: 80%;
+      border: none;
+      font-size: 1.5rem;
+
+    }
+
+    &__submit {
+      background-color: $color-green-light;
+      color: $color-grey;
+      font-size: 2rem;
+      width: 80%;
+      padding: 10px 20px;
+      border-radius: 5px;
+      letter-spacing: 2px;
+    }
+
+    &__submit:hover {
+      background-color: $color-grey;
+      color: $color-green-light;
+    }
+
+  }
+
+  .translation {
+
+    height: 30vh;
+    border: 1px solid $color-green-light;
+    width: 100%;
+
+    p {
+      color: $color-green-light;
+    }
+  }
+
+}
+
