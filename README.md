@@ -37,7 +37,7 @@ export const translateToMorse = (english) => {
 }
 ```
 
-The object validCharacters contained the english letters as the key and the morse translation as the value. The translateToMorse function takes the english string, converts it to an array and then maps over the array. For each letter it checks whether the validCharacters object contains a corresponding value and returns that value. If the input is invalid then a message will appear in the translated text box. Finally the function turns the array back to a string and returns it in a <p> tag. 
+The object validCharacters contained the english letters as the key and the morse translation as the value. The translateToMorse function takes the english string, converts it to an array and then maps over the array. For each letter it checks whether the validCharacters object contains a corresponding value and returns that value. If the input is invalid then a message will appear in the translated text box. Finally the function turns the array back to a string and returns it in a html p tag. 
 
 
 
